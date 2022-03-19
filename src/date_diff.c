@@ -73,9 +73,9 @@ int date_to_day(Date date)
     return total_day;
 }
 
-Date get_input_date(char* str_date)
+/*Date get_input_date(char* str_date)*/
 /*INPUT DATE*/
-/*Date get_input_date()*/
+Date get_input_date()
 {
     int dd = 0 , mm = 0 , yyyy = 0;
     my_printf("***************************************************\n");
@@ -85,7 +85,7 @@ Date get_input_date(char* str_date)
     /*char str_date[MAX_LIMIT] = "";*/
 
     /*INPUT DATE*/
-    /*char str_date[MAX_LIMIT];*/
+    char str_date[MAX_LIMIT];
 
     int count = 0;
     while (1)
@@ -94,7 +94,7 @@ Date get_input_date(char* str_date)
         my_printf("start loop: %d\n", count);
 
         /*INPUT DATE*/
-        /*fgets(str_date, MAX_LIMIT, stdin);*/
+        fgets(str_date, MAX_LIMIT, stdin);
 
         my_printf("str_date: %s\n", str_date);
         count++;
@@ -181,16 +181,16 @@ int main()
     printf("Please input a date dd-mm-yyyy \n");
 
 
-    Date d1 = get_input_date(str_date1);
+    /*Date d1 = get_input_date(str_date1);*/
     /*INPUT DATE*/
-    /*Date d1 = get_input_date();*/
+    Date d1 = get_input_date();
 
     my_printf("-----------------------------------------------\n");
     printf("Please input a date dd-mm-yyyy \n");
 
-    Date d2 = get_input_date(str_date2);
+    /*Date d2 = get_input_date(str_date2);*/
     /*INPUT DATE*/
-    /*Date d2 = get_input_date();*/
+    Date d2 = get_input_date();
     
     int day_diff = get_day_diff(d1,d2);
     printf("%d", day_diff);

@@ -13,20 +13,23 @@ Project Setup
 Step 1: Clone the project
 --------------------------------------------------
 `
-git clone https://github.com/samchan2022/c-lang-exercises
+git clone https://github.com/samchan2022/c-lang-exercises.git
 `
 
-Step 2: Build your program
+Step 2: Compile and Run the program
 --------------------------------------------------
+Check runing the final program. You could understand how the program works
 `
-git clone https://github.com/samchan2022/c-lang-exercises
+cd c-lang-exercises
+./compile_run.sh -d -f src/date_diff.c
 `
 
-Step 3: Check your answers in src
+Step 3: solve the questions
 --------------------------------------------------
-go to src and find the answers
+go to src and start working
 `
-cd src
+mkdir ans
+cd ans
 `
 
 
