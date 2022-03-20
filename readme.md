@@ -27,8 +27,13 @@ cd c-lang-exercises
 Step 3: solve the questions
 --------------------------------------------------
 go to src and start working
+
 `
 mkdir ans
+`
+
+
+`
 cd ans
 `
 
