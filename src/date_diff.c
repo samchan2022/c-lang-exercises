@@ -7,9 +7,8 @@
 #define MAX_YEAR 10000
 #define MIN_YEAR 0 
 
-/*int DEBUG = 1;*/
 int DEBUG = 0;
-int HAS_LEAP_YEAR = 0;
+int HAS_LEAP_YEAR = 1;
 
 void my_printf( const char* format, ... )
 {
@@ -114,21 +113,18 @@ Date get_input_date()
         if (is_legal_date(d))
         {
             my_printf("valid date\n");
-            /*getchar();*/
-            my_printf("day: %d\n", dd);
-            my_printf("month: %d\n", mm);
-            my_printf("year: %d\n", yyyy);
-            /*break;*/
-            return d;
+            break;
         }
         else 
-        {
             printf("else Please input a valid date\n");
-        }
     }
 
-    /*Date date = {dd, mm, yyyy};*/
-    /*return date;*/
+    my_printf("day: %d\n", dd);
+    my_printf("month: %d\n", mm);
+    my_printf("year: %d\n", yyyy);
+
+    Date date = {dd, mm, yyyy};
+    return date;
 }
 
 int is_legal_date(Date legal_date)
