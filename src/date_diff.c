@@ -7,7 +7,6 @@
 #define MAX_YEAR 10000
 #define MIN_YEAR 0 
 
-/*int DEBUG = 1;*/
 int DEBUG = 0;
 int HAS_LEAP_YEAR = 0;
 
@@ -70,7 +69,6 @@ int date_to_day(Date date)
         day_from_month += day_in_month[i];
     }
     int total_day = day_only + day_from_month + day_from_year;
-    /*my_printf("total day: %d\n", total_day);*/
     return total_day;
 }
 
@@ -114,11 +112,9 @@ Date get_input_date()
         if (is_legal_date(d))
         {
             my_printf("valid date\n");
-            /*getchar();*/
             my_printf("day: %d\n", dd);
             my_printf("month: %d\n", mm);
             my_printf("year: %d\n", yyyy);
-            /*break;*/
             return d;
         }
         else 
@@ -126,9 +122,6 @@ Date get_input_date()
             printf("else Please input a valid date\n");
         }
     }
-
-    /*Date date = {dd, mm, yyyy};*/
-    /*return date;*/
 }
 
 int is_legal_date(Date legal_date)
@@ -183,7 +176,6 @@ int main()
     strcpy( str_date1, "23/11/2023" );
     strcpy( str_date2, "5-11-2038" );
     printf("Please input a date dd-mm-yyyy \n");
-
 
     /*Date d1 = get_input_date(str_date1);*/
     /*INPUT DATE*/
