@@ -21,11 +21,6 @@ void my_printf( const char* format, ... )
     va_end( args );
 }
 
-/*struct Date {*/
-    /*int a, b, c;*/
-/*};*/
-/*typedef struct Date Date;*/
-
 typedef struct Date 
 {
     int dd, mm, yyyy;
@@ -53,9 +48,7 @@ int date_to_day(Date date)
     int i;
     for ( i = 0; i < 12 ; i++)
     {
-        /*my_printf("%d\n", day_in_month[i]);*/
         day_in_year += day_in_month[i];
-        /*my_printf("sum: %d\n", day_in_year);*/
     }
 
     day_from_year = day_in_year * date.yyyy;
@@ -72,18 +65,10 @@ int date_to_day(Date date)
     return total_day;
 }
 
-/*Date get_input_date(char* str_date)*/
-/*INPUT DATE*/
 Date get_input_date()
 {
     int dd = 0 , mm = 0 , yyyy = 0;
     my_printf("***************************************************\n");
-    /*my_printf("%s\n", str_date);*/
-    /*int valid_date = 0;*/
-    /*while ( valid_date == 0 )*/
-    /*char str_date[MAX_LIMIT] = "";*/
-
-    /*INPUT DATE*/
     char str_date[MAX_LIMIT];
 
     int count = 0;
@@ -92,7 +77,6 @@ Date get_input_date()
         /*scan input date*/
         my_printf("start loop: %d\n", count);
 
-        /*INPUT DATE*/
         fgets(str_date, MAX_LIMIT, stdin);
 
         my_printf("str_date: %s\n", str_date);
@@ -169,23 +153,12 @@ int get_day_diff (Date d1, Date d2)
 
 int main()
 {
-    char str_date1[MAX_LIMIT];
-    char str_date2[MAX_LIMIT];
-    /*23/11/1987*/
-    /*5-11-1987*/
-    strcpy( str_date1, "23/11/2023" );
-    strcpy( str_date2, "5-11-2038" );
     printf("Please input a date dd-mm-yyyy \n");
-
-    /*Date d1 = get_input_date(str_date1);*/
-    /*INPUT DATE*/
     Date d1 = get_input_date();
 
     my_printf("-----------------------------------------------\n");
     printf("Please input a date dd-mm-yyyy \n");
 
-    /*Date d2 = get_input_date(str_date2);*/
-    /*INPUT DATE*/
     Date d2 = get_input_date();
     
     int day_diff = get_day_diff(d1,d2);
